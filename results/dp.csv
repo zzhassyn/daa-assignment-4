@@ -1,0 +1,7 @@
+algorithm,n,avg_time_ms,cells_filled,result
+LCS,100,0.0365,10000,64
+EditDistance,100,0.0576,10000,55
+LCS,500,1.5274,250000,326
+EditDistance,500,1.4467,250000,267
+LCS,1000,3.3254,1000000,648
+EditDistance,1000,6.0275,1000000,521

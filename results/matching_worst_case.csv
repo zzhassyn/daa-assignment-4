@@ -1,0 +1,10 @@
+case,algorithm,n,m,avg_time_ms,comparisons,matches
+worst,Naive,10000,50,1.2033,497550,0
+worst,KMP,10000,50,0.0704,19951,0
+worst,Rabin-Karp,10000,50,0.1088,0,0
+worst,Naive,50000,50,5.1057,2497550,0
+worst,KMP,50000,50,0.2669,99951,0
+worst,Rabin-Karp,50000,50,0.5477,0,0
+worst,Naive,100000,50,9.1326,4997550,0
+worst,KMP,100000,50,0.4318,199951,0
+worst,Rabin-Karp,100000,50,1.0659,0,0

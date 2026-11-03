@@ -1,0 +1,4 @@
+algorithm,n,avg_time_ms,comparisons,max_lcp
+Kasai,1000,0.0646,1990,8
+Kasai,5000,0.1526,9989,11
+Kasai,10000,0.2432,19989,12

@@ -1,0 +1,51 @@
+Alphabet: ACGT, seed: 42, runs: 5, warm-up runs: 5
+
+=== LCS and Edit Distance (two random strings of length n) ===
+Algorithm            n       avg ms        cells   result
+LCS                100       0.0365        10000       64
+EditDistance       100       0.0576        10000       55
+LCS                500       1.5274       250000      326
+EditDistance       500       1.4467       250000      267
+LCS               1000       3.3254      1000000      648
+EditDistance      1000       6.0275      1000000      521
+
+=== String matching on random text (pattern length m = 20) ===
+Case     Algorithm          n       avg ms  comparisons  matches
+present  Naive          10000       0.0490        13369        1
+present  KMP            10000       0.0553        12521        1
+present  Rabin-Karp     10000       0.1093           20        1
+absent   Naive          10000       0.0435        13333        0
+absent   KMP            10000       0.0468        12360        0
+absent   Rabin-Karp     10000       0.1102            0        0
+present  Naive          50000       0.3161        66729        1
+present  KMP            50000       0.4678        62513        1
+present  Rabin-Karp     50000       0.5483           20        1
+absent   Naive          50000       0.3957        66575        0
+absent   KMP            50000       0.4441        62518        0
+absent   Rabin-Karp     50000       0.5502            0        0
+present  Naive         100000       0.7306       133318        1
+present  KMP           100000       0.8242       125057        1
+present  Rabin-Karp    100000       1.1006           20        1
+absent   Naive         100000       0.7036       133393        0
+absent   KMP           100000       0.8498       124844        0
+absent   Rabin-Karp    100000       1.0838            0        0
+
+=== Extra: worst case for Naive (text = A...A, pattern = A...AT, m = 50) ===
+Case     Algorithm          n       avg ms  comparisons  matches
+worst    Naive          10000       1.2033       497550        0
+worst    KMP            10000       0.0704        19951        0
+worst    Rabin-Karp     10000       0.1088            0        0
+worst    Naive          50000       5.1057      2497550        0
+worst    KMP            50000       0.2669        99951        0
+worst    Rabin-Karp     50000       0.5477            0        0
+worst    Naive         100000       9.1326      4997550        0
+worst    KMP           100000       0.4318       199951        0
+worst    Rabin-Karp    100000       1.0659            0        0
+
+=== Kasai's LCP algorithm (suffix array built before timing) ===
+Algo           n       avg ms  comparisons  max LCP
+Kasai       1000       0.0646         1990        8
+Kasai       5000       0.1526         9989       11
+Kasai      10000       0.2432        19989       12
+
+Done. CSV files are in the 'results' folder. (sink=38100)
